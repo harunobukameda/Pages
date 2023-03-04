@@ -2,8 +2,13 @@ export const config = {
   runtime: 'edge',
 }
 
-export default async function getServerSideProps (context) {
-  return {
-    props:{ name: 'John Doe' }
-  }
+import { GetServerSideProps } from 'next'
+
+type Props = {
+  name: string
 }
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  return {
+    props: { name: 'John Doe' }
+  }
