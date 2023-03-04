@@ -2,7 +2,7 @@ export const config = {
   runtime: 'edge',
 }
 
-export async function getServerSideProps (req) {
+export default async function getServerSideProps (context) {
   return {
     props:{ name: 'John Doe' }
   }
