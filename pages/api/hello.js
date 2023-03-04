@@ -2,13 +2,22 @@ export const config = {
   runtime: 'edge',
 }
 
-import { GetServerSideProps } from 'next'
-
-type Props = {
-  name: string
+function Page({ message }) {
+  return (
+      <>
+          <h1>Example page</h1>
+          // Render data
+          <h2>{message}</h2>
+      </>
+  )
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  return {
-    props: { name: 'John Doe' }
+export async function getServerSideProps() {
+return {
+  props: {
+      message: 'Hello world!'
   }
+}
+}
+
+export default Page
