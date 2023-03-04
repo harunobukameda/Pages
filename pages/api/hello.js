@@ -2,6 +2,8 @@ export const config = {
   runtime: 'edge',
 }
 
+import Head from "next/head";
+
 export default function Ssr({ random }) {
   return (
     <div className="main">
