@@ -3,6 +3,7 @@ export const config = {
 }
 
 export default async function (req) {
+  console.log(await [process.env.KV.get('test')])
   console.log(process.env.MY_ENV_VAR)
   console.log(await process.env.KV.get('test'))
 
