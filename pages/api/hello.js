@@ -4,9 +4,5 @@ export const config = {
 
 export default async function getServerSideProps() {
   const random = Math.floor(Math.random() * 100);
-  return {
-  props: {
-    random,
-  },
-};
+  return new Response(random);
 }
