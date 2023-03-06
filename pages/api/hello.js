@@ -4,7 +4,7 @@ export const config = {
 
 import Head from "next/head";
 
-export default function Ssr({ random }) {
+export default async function Ssr({ random }) {
   return (
     <div className="main">
       <Head>
